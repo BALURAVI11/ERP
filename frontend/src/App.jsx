@@ -6,6 +6,10 @@ import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
 import Customers from './pages/Customers';
 import Suppliers from './pages/Suppliers';
+import SalesOrders from './pages/SalesOrders';
+import PurchaseOrders from './pages/PurchaseOrders';
+import GRN from './pages/GRN';
+import Invoices from './pages/Invoices';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
@@ -82,6 +86,46 @@ function App() {
               <PrivateRoute>
                 <Layout>
                   <Suppliers />
+                </Layout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/sales-orders" 
+            element={
+              <PrivateRoute>
+                <Layout>
+                  <SalesOrders />
+                </Layout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/purchase-orders" 
+            element={
+              <PrivateRoute>
+                <Layout>
+                  <PurchaseOrders />
+                </Layout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/grn" 
+            element={
+              <PrivateRoute>
+                <Layout>
+                  <GRN />
+                </Layout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/invoices" 
+            element={
+              <PrivateRoute>
+                <Layout>
+                  <Invoices />
                 </Layout>
               </PrivateRoute>
             } 
